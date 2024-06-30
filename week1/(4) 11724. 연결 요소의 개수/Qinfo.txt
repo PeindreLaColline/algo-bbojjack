@@ -1,1 +1,0 @@
-연결 요소의 개수 실버2 https://www.acmicpc.net/problem/11724
