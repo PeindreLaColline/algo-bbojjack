@@ -9,7 +9,6 @@ for _ in range(T):
 
 def dfs(vtx):
     visited = [ 0 for _ in range(N+1)]
-
     stack = [vtx]
     while stack :
         target = stack.pop()
@@ -18,14 +17,34 @@ def dfs(vtx):
 
         for v in node[target]:
             if visited[v]==0:
+                # visited[v]=1
                 stack.append(v)
 
     return visited[1:]
 
-check = dfs(1)
+
+from collections import deque
+def bfs(vtx):
+    visited=[0 for _ in range(N+1)]
+    q = deque()
+    q.append(vtx)
+    visited[vtx]=1
+
+    while q: 
+        n = q.popleft()
+        for v in node[n]:
+            if visited[v]==0:
+                q.append(v)
+                visited[v]=1
+    
+    return visited
+
+# result = dfs(1)
+result = bfs(1)
 answer=0
-for c in check:
+for c in result:
     if c==1:
         answer+=1
 
+# 1번 컴퓨터는 제외
 print(answer-1)
