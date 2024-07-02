@@ -1,0 +1,7 @@
+2024.07.08 모임
+
+1. 부분수열의 합 - 실버2 https://www.acmicpc.net/problem/1182 (박수빈)
+2. 암호 만들기 - 골드5 https://www.acmicpc.net/problem/1759 (김채원)
+3. 차이를 최대로 - 실버2 https://www.acmicpc.net/problem/10819 (권예진)
+4. 감시 - 골드3 https://www.acmicpc.net/problem/15683 (강희준)
+5. 미친 로봇 - 골드4 https://www.acmicpc.net/problem/1405 (서정우)
