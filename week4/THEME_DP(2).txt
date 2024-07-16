@@ -1,0 +1,7 @@
+dp 넘 어려워잉....
+일주일 더!
+1. 1로 만들기 2 - 실버1 [12852번: 1로 만들기 2 (acmicpc.net)](https://www.acmicpc.net/problem/12852) (서정우)
+2. 정수 삼각형 - 실버1 [1932번: 정수 삼각형 (acmicpc.net)](https://www.acmicpc.net/problem/1932) (강희준)
+3. 이친수 - 실버3 [2193번: 이친수 (acmicpc.net)](https://www.acmicpc.net/problem/2193) (김채원)
+4. 퇴사 - 실버3 [14501번: 퇴사 (acmicpc.net)](https://www.acmicpc.net/problem/14501) (최지훈)
+5. 카드 구매하기 - 실버1 [11052번: 카드 구매하기 (acmicpc.net)](https://www.acmicpc.net/problem/11052) (권예진)
