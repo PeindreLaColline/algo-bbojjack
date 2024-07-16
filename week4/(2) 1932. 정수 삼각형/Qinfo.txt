@@ -1,0 +1,2 @@
+정수 삼각형 - 실버1 1932번: 정수 삼각형 (acmicpc.net) (강희준)
+https://www.acmicpc.net/problem/1932
