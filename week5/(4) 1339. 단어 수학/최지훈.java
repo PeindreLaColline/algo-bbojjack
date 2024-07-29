@@ -2,6 +2,24 @@
 import java.io.*; 
 import java.util.*; 
 
+/* 각 자릿수를 가중치로 저장한 후 가중치가 큰 순서대로 정렬해서 큰 수와 곱해서 더해준다. 
+   2
+   GCF
+   ACDEB
+
+   A 10000
+   B 1
+   C 1010
+   D 100
+   E 10
+   F 1
+   G100
+
+   10000 1010 100 100 10 1 1
+   9      8      7    6    5  4 3
+ = 90000 + 8080 + 700 + 600 + 50 + 4 + 3 = 99437
+*/
+
 public class p4_1339_단어수학_cjh {
 	static String[] words; 
 	static int[] weight; 
