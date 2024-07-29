@@ -1,6 +1,13 @@
 
 import java.io.*; 
 import java.util.*; 
+/* 최소 범위 문제 
+6
+2
+1 6 9 3 6 7
+
+1  3    66 7  9  N개의 집중국에서 N-1개의 센서간의 간선을 제외할 수 있으므로 센서 간 가장 긴 길이를 N-1개만큼 제외하고 출력한다.  
+*/
 
 public class p5_2212_센서_cjh {
 	static int N,K;
