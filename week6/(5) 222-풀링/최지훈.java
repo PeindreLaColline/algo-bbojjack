@@ -7,7 +7,7 @@ import java.util.*;
 /*
  * 2 X 2 정사각형의 4가지 수를 order배열에 넣어서 2번째로 큰 수를 구한 다음에, 이를 다시 배열에 넣어서 하나만 남을 때 까지 반복한다. 
  * */
-public class p5_17289_222풀링 {
+public class p5_17829_222풀링 {
 	static int N; 
 	static int[][] pro; 
 	static int[] order = new int[4]; 
