@@ -1,0 +1,1 @@
+5. 배열 탈출 - 골드5 [11909번: 배열 탈출 (acmicpc.net)](https://www.acmicpc.net/problem/11909)
