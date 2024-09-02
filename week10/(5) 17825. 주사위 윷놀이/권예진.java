@@ -15,7 +15,7 @@ public class Main_bj_17825_주사위윷놀이_권예진 {
 	static int[] N ;
 	static int ans = 0;
 
-	static void perm(int cnt) {
+	static void perm(int cnt) { // 말의 순서 정하기 (중복 순열)
 		if(cnt == 10) {
 			game();
 			return;
@@ -34,22 +34,22 @@ public class Main_bj_17825_주사위윷놀이_권예진 {
 		for(int i = 0; i<10; i++){
 			int nowDice = N[i]; // 현재 주사위 번호
 			int nowHorse = horse[i]; // 현재 움직일 말 번호
-			if(isFinish(p[nowHorse])) return; // 말의 현재 위치가 도착지점일때
+			if(isFinish(p[nowHorse])) return; // 말의 현재 위치가 도착지점일때 return
 
-			int next = nextPoint(p[nowHorse], nowDice);
-			if(isFinish(next)){
-				setVisited(visited, p[nowHorse], false);
+			int next = nextPoint(p[nowHorse], nowDice); //말의 다음 위치, nextPoint는 말이 도착지점을 넘어갓을때 + 파란색 발판밟았을때 해결.
+			if(isFinish(next)){ // 다음이 도착 지점일때
+				setVisited(visited, p[nowHorse], false); //도착지점에는 여러 말이 있어도 됨 그러므로 false처리
 				p[nowHorse] = next;
 				continue;
 			}
 			if(visited[next]) return; // 그 자리에 말이 존재
-			setVisited(visited, p[nowHorse], false);
-			setVisited(visited, next, true); // 말이 있는 위치
+			setVisited(visited, p[nowHorse], false); // 말이 다른 지점으로 갔으니 false
+			setVisited(visited, next, true); // 말이 있는 위치, true
 
 			p[nowHorse] = next; // 말의 위치 저장
-			score += map[p[nowHorse]];
+			score += map[p[nowHorse]]; // 점수 누적
 		}
-		ans = Math.max(ans, score);
+		ans = Math.max(ans, score); // 최대 값 찾기
 	}
 
 	static int nextPoint (int nowIdx, int dice){ // 도착 지점을 넘어 갔을때 도착 지점으로!
@@ -70,23 +70,23 @@ public class Main_bj_17825_주사위윷놀이_권예진 {
 	}
 
 	static void setVisited(boolean[] visited, int idx, boolean check){
-		if(idx == 20 || idx == 29 || idx == 37 || idx == 46){ // 말이 40일 때
+		if(idx == 20 || idx == 29 || idx == 37 || idx == 46){ // 말이 40일 때, 40인 모든 위치 check
 			visited[20] = check;
 			visited[29] = check;
 			visited[37] = check;
 			visited[46] = check;
 		}
-		else if(idx == 26 || idx == 34 || idx == 43){ // 말이 25일때
+		else if(idx == 26 || idx == 34 || idx == 43){ // 말이 25일때 , 25인 모든 위치 check
 			visited[26] = check;
 			visited[34] = check;
 			visited[43] = check;
 		}
-		else if(idx == 27 || idx == 35 || idx == 44){ // 말이 30일때
+		else if(idx == 27 || idx == 35 || idx == 44){ // 말이 30일때 , 30인 모든 위치 check
 			visited[27] = check;
 			visited[35] = check;
 			visited[44] = check;
 		}
-		else if(idx == 28 || idx == 36 || idx == 45){ // 말이 35일때
+		else if(idx == 28 || idx == 36 || idx == 45){ // 말이 35일때 , 35인 모든 위치 check
 			visited[28] = check;
 			visited[36] = check;
 			visited[45] = check;
@@ -96,7 +96,7 @@ public class Main_bj_17825_주사위윷놀이_권예진 {
 	}
 
 	static boolean isFinish(int idx){
-		return idx == 21 || idx == 30 || idx == 38 ||idx == 47; // 도착 인덱스일때 true 반환
+		return idx == 21 || idx == 30 || idx == 38 ||idx == 47; // 도착 지점일때 true 반환
 	}
 
 
@@ -107,7 +107,7 @@ public class Main_bj_17825_주사위윷놀이_권예진 {
 		for (int i = 0; i < 10; i++) {
 			N[i] = Integer.parseInt(st.nextToken());
 		}
-		// 말의 순서를 뽑기 (한번도 출전안하는 말도 있을 수 있음
+		// 말의 순서를 뽑기 (한번도 출전안하는 말도 있을 수 있음 -> 중복순열)
 		perm(0);
 		System.out.println(ans);
 		}
